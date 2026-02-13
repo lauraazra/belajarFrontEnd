@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Unit & Value Masterclass</title>
+    <link rel="stylesheet" href="ValueUnit.css">
+</head>
+
+<body>
+
+    <header>
+        <h1>Unit & Value Laboratory</h1>
+        <p>Belajar rem, em, vh, vw, dan calc() secara visual</p>
+    </header>
+
+    <main class="container">
+        <section class="card">
+            <h2>1. REM vs EM</h2>
+            <div class="parent-box">
+                Parent (font: 20px)
+                <div class="box rem-unit">Unit REM (Tetap 16px)</div>
+                <div class="box em-unit">Unit EM (Ikut Parent: 20px)</div>
+            </div>
+            <p><small>*REM patokannya HTML root, EM patokannya ortu terdekat.</small></p>
+        </section>
+
+        <section class="card v-section">
+            <h2>2. Viewport (vh & vw)</h2>
+            <div class="box vh-box">Tinggi 20vh</div>
+            <div class="box vw-box">Lebar 50% dari VW</div>
+        </section>
+
+        <section class="card">
+            <h2>3. The Power of Calc()</h2>
+            <div class="calc-container">
+                <div class="box calc-box">Lebar: calc(100% - 40px)</div>
+            </div>
+        </section>
+
+        <section class="card">
+            <h2>4. Angle & Time (Rotation)</h2>
+            <div class="box rotate-box">360deg / 2s</div>
+        </section>
+
+        <section class="card">
+            <h2>5. Responsive Clamp</h2>
+            <h3 class="clamp-text">Teks ini mengecil di HP, membesar di Monitor secara otomatis!</h3>
+        </section>
+    </main>
+
+</body>
+
+</html>

@@ -1,0 +1,108 @@
+.container{
+    display: flex;
+    width: 100%;
+}
+
+.static, .relative{
+    flex: 1;
+}
+
+.satu, .dua, .tiga, .empat, .lima, .enam, .satu1, .dua2, .tiga3, .empat4, .lima5, .enam6 {
+    margin: auto;
+}
+
+/* 
+    Static adalah posisi default
+    tidak bisa pakai top, right, bottom, left
+*/
+
+/* kalo dikasi minus atas bakal overlaping dengan bagian atasnya */
+.satu{
+    width: 100px;
+    height: 100px;
+    background-color: lightblue;
+}
+
+.dua{
+    width: 100px;
+    height: 100px;
+    background-color: green;
+    position: static;
+    margin-top: -30px;
+}
+
+.tiga{
+    width: 100px;
+    height: 100px;
+    background-color: lightpink;
+}
+
+/* kalo dikasi ke bawah bakal ngegeser yang bawahnya*/
+.satu1{
+    width: 100px;
+    height: 100px;
+    background-color: lightblue;
+}
+
+.dua2{
+    width: 100px;
+    height: 100px;
+    background-color: green;
+    position: static;
+    margin-top: 30px;
+}
+
+.tiga3{
+    width: 100px;
+    height: 100px;
+    background-color: lightpink;
+}
+
+/* 
+    Relative ngebuat seolah si elemen naik satu tingkat, jadi bakal overlapping ke atas si elemen lain
+*/
+
+/* overlapping ke bawah */
+
+.empat{
+    width: 100px;
+    height: 100px;
+    background-color: royalblue;
+}
+
+.lima{
+    width: 100px;
+    height: 100px;
+    background-color: limegreen;
+    position: relative;
+    top: 30px;
+    right: 30px;
+}
+
+.enam{
+    width: 100px;
+    height: 100px;
+    background-color: salmon;
+}
+
+/* overlapping ke atas */
+.empat4{
+    width: 100px;
+    height: 100px;
+    background-color: royalblue;
+}
+
+.lima5{
+    width: 100px;
+    height: 100px;
+    background-color: limegreen;
+    position: relative;
+    bottom: 30px;
+    right: 30px;
+}
+
+.enam6{
+    width: 100px;
+    height: 100px;
+    background-color: salmon;
+}

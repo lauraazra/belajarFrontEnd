@@ -1,0 +1,13 @@
+/* 
+    Filter bisa ditumpuk, filter lebih ringa dibrowser
+    blur(px)
+    brightness(angka|%) => kecerahan
+    contrast(angka|%) => atur gelap makin gelap, terang makin terang
+    saturate(angka|%) => menonjolkan warna
+    grayscale(angka|%) => mengabu abukan warna
+    sepia(angka|%) => menguning
+    invert(angka|%) => seperti negatif film
+    opacity(angka|%) => bikin transparan, 
+    drop-shadow(angka|%) => nilai seperti box shadow, drop bisa digunakan untuk box ataupun text shadow, drop bisa memberi efect pada gambar yang backgroundnya transparan jadi bukan full kotaknya
+    hue-rotate(deg) => merotasi warna, merubah warna
+*/

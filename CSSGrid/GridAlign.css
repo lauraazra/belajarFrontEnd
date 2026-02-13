@@ -1,0 +1,8 @@
+/* 
+    justify-items => sumbuh horizontal => start, end, center, stretch (default)
+    align-items => sumbu vertikal => start, end, center, stretch (default)
+    place-items => shorthand justify dan align => <align> <justify> || <satu nilai jika nilainya sama>
+    justify-content => ngatur gridnya bukan itemnya secara horizontal => start, end, center, stretch, space-around, space-between, space-evenly
+    align-content => ngatur gridnya bukan itemnya secara vertikal => start, end, center, stretch, space-around, space-between, space-evenly
+    place-content => shorthand justify dan align => <align> <justify> || <satu nilai jika nilainya sama>
+*/

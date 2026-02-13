@@ -1,0 +1,56 @@
+/* 
+    padding ga bisa minus atau auto pak 
+    padding ngaruh ke ukuran box
+*/
+.satu {
+    width: 500px;
+    background-color: pink;
+    margin: 50px auto;
+    padding: 10px 20px 30px 40px;
+    /* jadi ukuran sebenar bukan 500px tapi 500+10+20+30+40 = 570px */
+}
+
+/* 
+    border: width style color
+    solid, dotted, dashed, double
+    Border ngaruh ke ukuran box
+*/
+
+.dua {
+    width: 300px;
+    background-color: rosybrown;
+    margin: 50px auto;
+    padding: 20px;
+    border: 15px dashed orange;
+    /* Ukurannya bukan 300 tapi 300+(4*20)+(4*15)=440 */
+}
+
+/* 
+    box sizing => biar si padding & border ga ngaruh ke ukuran box dan si box nyesuain ukurannya sama box orang tuanya
+
+    buat liat hapus aja si box-sizing di tigaempat .div
+*/
+
+.tigaempat div {
+    width: 500px;
+    margin: 10px auto;
+    box-sizing: border-box;
+}
+
+.tiga {
+    background-color: darkgoldenrod;
+    padding: 50px;
+    /* ini ukuran real tanpa box sizing => 700px */
+}
+
+.empat {
+    background-color: blue;
+    border: 15px dotted silver;
+    padding: 10px;
+    /* ini ukuran real tanpa box sizing => 600px */
+}
+
+.lima {
+    /* ini ukurang real ikutin ortu */
+    background-color: aqua;
+}

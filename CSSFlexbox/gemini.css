@@ -1,0 +1,39 @@
+.container {
+    display: flex;
+    border: 5px solid black;
+    padding: 10px;
+    background-color: #eee;
+    width: 100%; /* Bisa ditarik-tarik */
+    box-sizing: border-box;
+}
+
+.kotak {
+    height: 150px;
+    padding: 10px;
+    border: 2px solid white;
+    color: white;
+    text-align: center;
+}
+
+/* 1. SI RAKUS: Jatah rejekinya paling banyak */
+.si-rakus {
+    background-color: crimson;
+    flex-basis: 200px; /* Modal awal 200px */
+    flex-grow: 2;      /* Ambil sisa ruang 2x lebih banyak dari standar */
+    flex-shrink: 1;    /* Tetep mau nyusut kalau sempit */
+}
+
+/* 2. SI STANDAR: Pake Shorthand (Paling sering dipake di dunia kerja) */
+.si-standar {
+    background-color: dodgerblue;
+    /* flex: grow shrink basis */
+    flex: 1 1 200px;   
+}
+
+/* 3. SI TEGUH: Ukuran awal gede, dan GAK MAU NYUSUT */
+.si-teguh {
+    background-color: forestgreen;
+    flex-basis: 300px; /* Modal awal paling gede */
+    flex-grow: 0;      /* Gak mau melar meskipun ada sisa ruang */
+    flex-shrink: 0;    /* GAK MAU NYUSUT. Dia bakal tetep 300px meski layar sempit! */
+}

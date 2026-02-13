@@ -1,0 +1,34 @@
+/* 
+    grid-template-columns => definisi kolom
+    grid-template-rows => definisi row
+        <track-size> ... | <line-name><track-size>
+        track-size => px, %, auto, fr
+        line-name => nama track
+
+    explicit => ngatur sendiri (garis solid)
+    implicit => diaturin (garis putus putus diluar garis solid)
+    ngatur implicit pakai
+    grid-auto-columns & grid-auto-rows => <track-size>
+    buat atur cell implisit mau jadi kolom atau baris pakai grid-auto-flow => row | column | row dense | column dense
+*/
+
+.container{
+    display: grid;
+    width: 80%;
+    margin: 50px auto;
+    border: 1px solid black;
+    grid-template-columns: 25% auto 50px;
+    grid-template-rows: 50px 80px auto;
+}
+
+.container .item{
+    background-color: royalblue;
+    border: 1px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container .item:nth-child(even) {
+    background-color: salmon;
+}

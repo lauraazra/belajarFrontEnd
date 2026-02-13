@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flexbox Pendahuluan</title>
+    <link rel="stylesheet" href="Pendahuluan.css">
+</head>
+
+<body>
+    <div class="display">
+        <h1>Display</h1>
+        <p>Tanpa Flex</p>
+        <div class="nondisplay">
+            <div class="kotak kotak1">1</div>
+            <div class="kotak kotak2">2</div>
+            <div class="kotak kotak3">3</div>
+            <div class="kotak kotak4">4</div>
+            <div class="kotak kotak5">5</div>
+        </div>
+        <p>dengan display=flex</p>
+        <div class="flex">
+            <div class="kotak kotak1">1</div>
+            <div class="kotak kotak2">2</div>
+            <div class="kotak kotak3">3</div>
+            <div class="kotak kotak4">4</div>
+            <div class="kotak kotak5">5</div>
+        </div>
+    </div>
+
+    <br><br><br><br><br>
+
+    <div class="flex-direction">
+        <h1>Flex Direction</h1>
+        <p>row => default dari kiri ke kanan</p>
+        <div class="row flex">
+            <div class="kotak kotak1">1</div>
+            <div class="kotak kotak2">2</div>
+            <div class="kotak kotak3">3</div>
+            <div class="kotak kotak4">4</div>
+            <div class="kotak kotak5">5</div>
+        </div>
+        <p>row-reverse => dari kanan ke kiri</p>
+        <div class="row-reverse flex">
+            <div class="kotak kotak1">1</div>
+            <div class="kotak kotak2">2</div>
+            <div class="kotak kotak3">3</div>
+            <div class="kotak kotak4">4</div>
+            <div class="kotak kotak5">5</div>
+        </div>
+        <p>column => atas ke bawah</p>
+        <div class="column flex">
+            <div class="kotak kotak1">1</div>
+            <div class="kotak kotak2">2</div>
+            <div class="kotak kotak3">3</div>
+            <div class="kotak kotak4">4</div>
+            <div class="kotak kotak5">5</div>
+        </div>
+        <p>column-reverse => bawah ke atas</p>
+        <div class="column-reverse flex">
+            <div class="kotak kotak1">1</div>
+            <div class="kotak kotak2">2</div>
+            <div class="kotak kotak3">3</div>
+            <div class="kotak kotak4">4</div>
+            <div class="kotak kotak5">5</div>
+        </div>
+    </div>
+
+    <br><br><br><br><br>
+
+    <div class="flex-wrap">
+        <h1>Flex Wrap</h1>
+        <p>no-wrap => panjangnya ngikutin kotak</p>
+        <div class="no-wrap flex">
+            <div class="kotak kotak1">1</div>
+            <div class="kotak kotak2">2</div>
+            <div class="kotak kotak3">3</div>
+            <div class="kotak kotak4">4</div>
+            <div class="kotak kotak5">5</div>
+        </div>
+        <p>wrap => penuh dipindahin ke bawah</p>
+        <div class="wrap flex">
+            <div class="kotak kotak1">1</div>
+            <div class="kotak kotak2">2</div>
+            <div class="kotak kotak3">3</div>
+            <div class="kotak kotak4">4</div>
+            <div class="kotak kotak5">5</div>
+        </div>
+        <p>wrap-reverse => di pindah ke bawah tapi dibalik</p>
+        <div class="wrap-reverse flex">
+            <div class="kotak kotak1">1</div>
+            <div class="kotak kotak2">2</div>
+            <div class="kotak kotak3">3</div>
+            <div class="kotak kotak4">4</div>
+            <div class="kotak kotak5">5</div>
+        </div>
+    </div>
+
+
+    <br><br><br><br><br>
+
+    <div class="justify-content">
+        <h1>justify-content</h1>
+        <p>flex-start</p>
+        <div class="flex-start flex">
+            <div class="kotak kotak1">1</div>
+            <div class="kotak kotak2">2</div>
+            <div class="kotak kotak3">3</div>
+            <div class="kotak kotak4">4</div>
+            <div class="kotak kotak5">5</div>
+        </div>
+        <p>flex-end</p>
+        <div class="flex-end flex">
+            <div class="kotak kotak1">1</div>
+            <div class="kotak kotak2">2</div>
+            <div class="kotak kotak3">3</div>
+            <div class="kotak kotak4">4</div>
+            <div class="kotak kotak5">5</div>
+        </div>
+        <p>center</p>
+        <div class="center flex">
+            <div class="kotak kotak1">1</div>
+            <div class="kotak kotak2">2</div>
+            <div class="kotak kotak3">3</div>
+            <div class="kotak kotak4">4</div>
+            <div class="kotak kotak5">5</div>
+        </div>
+        <p>space-between</p>
+        <div class="space-between flex">
+            <div class="kotak kotak1">1</div>
+            <div class="kotak kotak2">2</div>
+            <div class="kotak kotak3">3</div>
+            <div class="kotak kotak4">4</div>
+            <div class="kotak kotak5">5</div>
+        </div>
+        <p>space-around</p>
+        <div class="space-around flex">
+            <div class="kotak kotak1">1</div>
+            <div class="kotak kotak2">2</div>
+            <div class="kotak kotak3">3</div>
+            <div class="kotak kotak4">4</div>
+            <div class="kotak kotak5">5</div>
+        </div>
+        <p>space-evenly</p>
+        <div class="space-evenly flex">
+            <div class="kotak kotak1">1</div>
+            <div class="kotak kotak2">2</div>
+            <div class="kotak kotak3">3</div>
+            <div class="kotak kotak4">4</div>
+            <div class="kotak kotak5">5</div>
+        </div>
+    </div>
+
+    <br><br><br><br><br>
+
+    <div class="align-items">
+        <h1>align-items</h1>
+        <p>flex-start</p>
+        <div class="flex-start flex">
+            <div class="kotak kotak1">1</div>
+            <div class="kotak kotak2">2</div>
+            <div class="kotak kotak3">3</div>
+            <div class="kotak kotak4">4</div>
+            <div class="kotak kotak5">5</div>
+        </div>
+        <p>flex-end</p>
+        <div class="flex-end flex">
+            <div class="kotak kotak1">1</div>
+            <div class="kotak kotak2">2</div>
+            <div class="kotak kotak3">3</div>
+            <div class="kotak kotak4">4</div>
+            <div class="kotak kotak5">5</div>
+        </div>
+        <p>center</p>
+        <div class="center flex">
+            <div class="kotak kotak1">1</div>
+            <div class="kotak kotak2">2</div>
+            <div class="kotak kotak3">3</div>
+            <div class="kotak kotak4">4</div>
+            <div class="kotak kotak5">5</div>
+        </div>
+        <p>stretch</p>
+        <div class="stretch flex">
+            <div class="kotak kotak1">1</div>
+            <div class="kotak kotak2">2</div>
+            <div class="kotak kotak3">3</div>
+            <div class="kotak kotak4">4</div>
+            <div class="kotak kotak5">5</div>
+        </div>
+        <p>baseline</p>
+        <div class="baseline flex">
+            <div class="kotak kotak1">1</div>
+            <div class="kotak kotak2">2</div>
+            <div class="kotak kotak3">3</div>
+            <div class="kotak kotak4">4</div>
+            <div class="kotak kotak5">5</div>
+        </div>
+    </div>
+
+    <br><br><br><br><br>
+
+    <div class="align-content">
+        <h1>align-content</h1>
+        <p>flex-start</p>
+        <div class="flex-start flex">
+            <div class="kotak kotak1">1</div>
+            <div class="kotak kotak2">2</div>
+            <div class="kotak kotak3">3</div>
+            <div class="kotak kotak4">4</div>
+            <div class="kotak kotak5">5</div>
+            <div class="kotak kotak6">6</div>
+            <div class="kotak kotak7">7</div>
+            <div class="kotak kotak8">8</div>
+            <div class="kotak kotak9">9</div>
+            <div class="kotak kotak10">10</div>
+        </div>
+        <p>flex-end</p>
+        <div class="flex-end flex">
+            <div class="kotak kotak1">1</div>
+            <div class="kotak kotak2">2</div>
+            <div class="kotak kotak3">3</div>
+            <div class="kotak kotak4">4</div>
+            <div class="kotak kotak5">5</div>
+            <div class="kotak kotak6">6</div>
+            <div class="kotak kotak7">7</div>
+            <div class="kotak kotak8">8</div>
+            <div class="kotak kotak9">9</div>
+            <div class="kotak kotak10">10</div>
+        </div>
+        <p>center</p>
+        <div class="center flex">
+            <div class="kotak kotak1">1</div>
+            <div class="kotak kotak2">2</div>
+            <div class="kotak kotak3">3</div>
+            <div class="kotak kotak4">4</div>
+            <div class="kotak kotak5">5</div>
+            <div class="kotak kotak6">6</div>
+            <div class="kotak kotak7">7</div>
+            <div class="kotak kotak8">8</div>
+            <div class="kotak kotak9">9</div>
+            <div class="kotak kotak10">10</div>
+        </div>
+        <p>stretch</p>
+        <div class="stretch flex">
+            <div class="kotak kotak1">1</div>
+            <div class="kotak kotak2">2</div>
+            <div class="kotak kotak3">3</div>
+            <div class="kotak kotak4">4</div>
+            <div class="kotak kotak5">5</div>
+            <div class="kotak kotak6">6</div>
+            <div class="kotak kotak7">7</div>
+            <div class="kotak kotak8">8</div>
+            <div class="kotak kotak9">9</div>
+            <div class="kotak kotak10">10</div>
+        </div>
+        <p>space-between</p>
+        <div class="space-between flex">
+            <div class="kotak kotak1">1</div>
+            <div class="kotak kotak2">2</div>
+            <div class="kotak kotak3">3</div>
+            <div class="kotak kotak4">4</div>
+            <div class="kotak kotak5">5</div>
+            <div class="kotak kotak6">6</div>
+            <div class="kotak kotak7">7</div>
+            <div class="kotak kotak8">8</div>
+            <div class="kotak kotak9">9</div>
+            <div class="kotak kotak10">10</div>
+        </div>
+        <p>space-around</p>
+        <div class="space-around flex">
+            <div class="kotak kotak1">1</div>
+            <div class="kotak kotak2">2</div>
+            <div class="kotak kotak3">3</div>
+            <div class="kotak kotak4">4</div>
+            <div class="kotak kotak5">5</div>
+            <div class="kotak kotak6">6</div>
+            <div class="kotak kotak7">7</div>
+            <div class="kotak kotak8">8</div>
+            <div class="kotak kotak9">9</div>
+            <div class="kotak kotak10">10</div>
+        </div>
+    </div>
+
+    <br><br><br><br><br>
+
+    <h1>order</h1>
+    <p>no order</p>
+    <div class="no-order flex">
+        <div class="kotak kotak1">1</div>
+        <div class="kotak kotak2">2</div>
+        <div class="kotak kotak3">3</div>
+        <div class="kotak kotak4">4</div>
+        <div class="kotak kotak5">5</div>
+    </div>
+    <p>with order</p>
+    <div class="order flex">
+        <div class="kotak kotak1">1</div>
+        <div class="kotak kotak2">2</div>
+        <div class="kotak kotak3">3</div>
+        <div class="kotak kotak4">4</div>
+        <div class="kotak kotak5">5</div>
+    </div>
+
+    <br><br><br><br><br>
+
+    <div class="flex-grow">
+        <h1>Flex Grow</h1>
+        <p>Tanpa Flex Grow</p>
+        <div class="nogrow flex">
+            <div class="kotak1">1</div>
+            <div class="kotak2">2</div>
+            <div class="kotak3">3</div>
+            <div class="kotak4">4</div>
+            <div class="kotak5">5</div>
+        </div>
+        <p>0 : 1</p>
+        <div class="g-01 flex">
+            <div class="kotak1">1</div>
+            <div class="kotak2">2</div>
+            <div class="kotak3">3</div>
+            <div class="kotak4">4</div>
+            <div class="kotak5">5</div>
+        </div>
+        <p>1 : 1</p>
+        <div class="g-11 flex">
+            <div class="kotak1">1</div>
+            <div class="kotak2">2</div>
+            <div class="kotak3">3</div>
+            <div class="kotak4">4</div>
+            <div class="kotak5">5</div>
+        </div>
+        <p>1 : 2 : 3</p>
+        <div class="g-123 flex">
+            <div class="kotak1">1</div>
+            <div class="kotak2">2</div>
+            <div class="kotak3">3</div>
+            <div class="kotak4">4</div>
+            <div class="kotak5">5</div>
+        </div>
+    </div>
+
+    <br><br><br><br><br>
+
+    <h1>align-self</h1>
+    <div class="align-self">
+        <div class="flex">
+            <div class="kotak kotak1">auto</div>
+            <div class="kotak kotak2">flex-start</div>
+            <div class="kotak kotak3">flex-end</div>
+            <div class="kotak kotak4">center</div>
+            <div class="kotak kotak5">baseline</div>
+            <div class="kotak kotak6">stretch</div>
+        </div>
+    </div>
+</body>
+
+</html>

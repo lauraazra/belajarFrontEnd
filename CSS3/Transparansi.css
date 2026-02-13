@@ -1,0 +1,155 @@
+body{
+    background-image: url(../CSS/belajar.jpg);
+}
+
+.container{
+    width: 49%;
+    text-align: center;
+    display: inline-block;;
+}
+
+/* Opacity itu bikin semua elemen tertranparansikan */
+
+/* kotak 1 kebawa 0.5 karena ortunya 0.5, tapi nembus kebawah*/
+.kotak{
+    width: 300px;
+    height: 300px;
+    background-color: salmon;
+    opacity: 0.5;
+    margin: 50px auto 100px;
+    position: relative;
+}
+
+.kotak1{
+    width: 100px;
+    height: 100px;
+    background-color: royalblue;
+    position: absolute;
+    right: -50px;
+    bottom: -50px;
+}
+
+/* kotak 3 opacity dan si kotak 2 nya keliatan, karena si kotak 3 punya opacity juga jadi opacity kotak 2 0.5, kotak 3 0.25 karena dia udah punya dari ortunya */
+
+.kotak2{
+    width: 300px;
+    height: 300px;
+    background-color: salmon;
+    opacity: 0.5;
+    margin: 50px auto 100px;
+    position: relative;
+}
+
+.kotak3{
+    width: 100px;
+    height: 100px;
+    background-color: royalblue;
+    position: absolute;
+    right: -50px;
+    bottom: -50px;
+    opacity: 0.5;
+}
+
+/* ga bisa bikin kotak 5 solid karena masih kebawa ortunya */
+
+.kotak4{
+    width: 300px;
+    height: 300px;
+    background-color: salmon;
+    opacity: 0.5;
+    margin: 50px auto 100px;
+    position: relative;
+}
+
+.kotak5{
+    width: 100px;
+    height: 100px;
+    background-color: royalblue;
+    position: absolute;
+    right: -50px;
+    bottom: -50px;
+    opacity: 1;
+}
+
+/* cuma bisa kotak 6 yang solid tapi kalo sebaliknya ga akan bisa */
+
+.kotak6{
+    width: 300px;
+    height: 300px;
+    background-color: salmon;
+    opacity: 1;
+    margin: 50px auto 100px;
+    position: relative;
+}
+
+.kotak7{
+    width: 100px;
+    height: 100px;
+    background-color: royalblue;
+    position: absolute;
+    right: -50px;
+    bottom: -50px;
+    opacity: 0.5;
+}
+
+/* RGBA itu merubah warna backgroud bukan elemennya */
+/* bisa atur transparansi masing masing kotak dan ga ngaruh ke kotak anak*/
+
+/* kotak 8 solid kotak 9 0.5 */
+
+.kotak8{
+    width: 300px;
+    height: 300px;
+    background-color: rgba(250, 128, 114, 1);
+    margin: 50px auto 100px;
+    position: relative;
+}
+
+.kotak9{
+    width: 100px;
+    height: 100px;
+    background-color: rgba(65, 105, 225, 0.5);
+    position: absolute;
+    right: -50px;
+    bottom: -50px;
+}
+
+/* kotak 10 0.5 kotak 11 solid */
+
+.kotak10{
+    width: 300px;
+    height: 300px;
+    background-color: rgba(250, 128, 114, 0.5);
+    margin: 50px auto 100px;
+    position: relative;
+}
+
+.kotak11{
+    width: 100px;
+    height: 100px;
+    background-color: rgba(65, 105, 225, 1);
+    position: absolute;
+    right: -50px;
+    bottom: -50px;
+}
+
+/* kedua kotak sama sama 0.5 dan ga tembus kotak 12nya*/
+
+.kotak12{
+    width: 300px;
+    height: 300px;
+    background-color: rgba(250, 128, 114, 0.5);
+    margin: 50px auto 100px;
+    position: relative;
+}
+
+.kotak13{
+    width: 100px;
+    height: 100px;
+    background-color: rgba(65, 105, 225, 0.5);
+    position: absolute;
+    right: -50px;
+    bottom: -50px;
+}
+
+/* HSLA juga sama */

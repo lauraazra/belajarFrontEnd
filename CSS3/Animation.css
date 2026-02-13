@@ -1,0 +1,139 @@
+/* 
+    animation => 
+    [name] => nama animasi
+    [duration] => durasi
+    [timing-function] => kaya fungsi di transition
+    [delay] => jeda 
+    [iteration-count] => berapa kali diulang 
+    [direction] => gimana jalannya (normal, reverse, alternate (bulak balik), alternate-reverse (bulak balik tapi dari akhir) 
+    [fill-mode] => agar ga balik ke suatu posisi (none, forwards (ga balik ke awal tetep di akhir), backwards (ga balik ke akhir tetep di awal), both (keduanya)
+    [play-state] => running, paused (ga jalan) => biasa dipakai di js
+    
+    cara nulisnya bisa di dalam hover, bisa di elemennya tapi itu otomatis kejalanin kalo refresh
+
+    @keyfram [nama] {
+    from | persen(lebih dari 1){
+        isi transformasinya
+    }
+    to | persen(lebih dari 1){
+        isi transformasinya
+    }
+*/
+
+/* RESET & LAYOUT (Ini tetap sama) */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f0f2f5;
+    display: flex;
+    flex-direction: column;
+    padding: 50px;
+}
+
+.main-title { text-align: center; margin-bottom: 30px; }
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: center;
+    width: 100%;
+}
+
+.card {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    text-align: center;
+    width: 250px;
+    height: 250px;
+}
+
+/* KOTAK DASAR (Ini tetap sama) */
+.kotak {
+    width: 80px;
+    height: 80px;
+    background-color: #3498db;
+    margin: 30px auto;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+}
+
+/* Hover untuk pause biar kamu bisa liat detailnya */
+.kotak:hover {
+    animation-play-state: paused;
+    cursor: pointer;
+}
+
+/* -----------------------------------------
+   KEYFRAMES (SKENARIO ANIMASI)
+-------------------------------------------- */
+
+/* 1. Skenario Jalan Bolak-Balik */
+@keyframes geser {
+    from { transform: translateX(-60px); }
+    to { transform: translateX(60px); }
+}
+
+/* 2. Skenario RGB */
+@keyframes pelangi {
+    0% { background-color: red; }
+    33% { background-color: green; }
+    66% { background-color: blue; }
+    100% { background-color: red; }
+}
+
+/* 3. Skenario Muter */
+@keyframes putarMaksimal {
+    100% { transform: rotate(360deg); }
+}
+
+/* 4. Skenario Muncul Terus Hilang */
+@keyframes fadePop {
+    0% { opacity: 0; transform: scale(0.5); }
+    50% { opacity: 1; transform: scale(1.2); }
+    100% { opacity: 0; transform: scale(0.5); }
+}
+
+/* TAMBAH INI: Skenario Gerak Kanan Kiri Atas Bawah */
+@keyframes translateKomplit {
+    0% { transform: translate(0, 0); background-color: #3498db; } /* Awal: Di tengah */
+    25% { transform: translate(50px, 0); background-color: #e74c3c; } /* Kanan */
+    50% { transform: translate(50px, 50px); background-color: #f1c40f; } /* Bawah Kanan */
+    75% { transform: translate(0, 50px); background-color: #2ecc71; } /* Bawah Kiri */
+    100% { transform: translate(0, 0); background-color: #3498db; } /* Kembali ke awal */
+}
+/* SAMPAI SINI */
+
+
+/* -----------------------------------------
+   IMPLEMENTASI (PEMANGGILAN)
+-------------------------------------------- */
+
+.jalan {
+    /* nama durasi timing count direction */
+    animation: geser 2s ease-in-out infinite alternate;
+}
+
+.warna {
+    animation: pelangi 3s linear infinite;
+}
+
+.putar {
+    border-radius: 20px;
+    animation: putarMaksimal 2s linear infinite;
+}
+
+.muncul {
+    border-radius: 50%;
+    animation: fadePop 2s ease-in-out infinite;
+}
+
+/* TAMBAH INI: Panggil animasi gerak komplit */
+.gerak-komplit {
+    animation: translateKomplit 4s ease-in-out infinite;
+}
+/* SAMPAI SINI */

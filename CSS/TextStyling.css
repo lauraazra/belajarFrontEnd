@@ -1,0 +1,37 @@
+/* Text Styling */
+
+h1 {
+    color: khaki;
+    text-align: left;
+    text-indent: 50px;
+    text-decoration: underline;
+    text-transform: none;
+    letter-spacing: normal;
+}
+
+h2 {
+    color: rgb(112, 234, 158);
+    text-align: right;
+    text-indent: 20%;
+    text-decoration: overline;
+    text-transform: lowercase;
+    letter-spacing: 10px;
+}
+
+h3 {
+    text-align: center;
+    text-decoration: line-through;
+    text-transform: uppercase;
+    word-spacing: normal;
+}
+
+p {
+    color: #fff111;
+    text-align: justify;
+    text-transform: capitalize;
+    word-spacing: 10px;
+}
+
+a {
+    text-decoration: none;
+}

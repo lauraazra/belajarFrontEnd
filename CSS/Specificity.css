@@ -1,0 +1,59 @@
+p {
+    color: red;
+}
+
+p {
+    color: green;
+}
+
+#p1 {
+    color: yellow;
+}
+
+/* 
+    Inline      = 1000
+    Id          = 100
+    Class       = 10
+    Tag Element = 1
+*/
+
+/* kalah sama li yang lebih detail*/
+ul {
+    color: red;
+}
+
+/* kalah lagi sama ul li yang lebih detail */
+li {
+    color: green;
+}
+
+/* berhasil */
+ul li {
+    color: gray;
+}
+
+/* ga berhasil masih detail ul li*/
+ul#sarapan {
+    color: blue;
+}
+
+/* detail banget */
+ul#sarapan li {
+    color: pink;
+}
+
+.favorit {
+    color: chocolate;
+}
+
+ul .favorit {
+    color: brown;
+}
+
+ul li .favorit {
+    color: azure;
+}
+
+ul#sarapan .favorit {
+    color: black;
+}

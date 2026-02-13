@@ -1,0 +1,41 @@
+.hello:link {
+    color: orange;
+}
+
+.hello:hover {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 30px;
+    color: blue;
+}
+
+.hello:active {
+    font-style: italic;
+    font-style: oblique;
+}
+
+.hello:visited {
+    color: black;
+    font-size: 8px;
+}
+
+li:first-child a {
+    color: black;
+}
+
+/* even => genap */
+/* odd => ganjil */
+li:nth-child(3n) a {
+    color: chocolate;
+}
+
+li:last-child a {
+    color: green;
+}
+
+p:first-of-type {
+    color: blue;
+}
+
+p:last-of-type {
+    font-size: 50px;
+}

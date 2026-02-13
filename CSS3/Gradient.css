@@ -1,0 +1,114 @@
+.gradient{
+    text-align: center;
+}
+
+.container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.col{
+    width: 200px;
+    height: 100px;
+    flex: none;
+    margin: 10px 5px;
+    line-height: 100px;
+    color: white;
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* 
+    warnanya bisa lebih dari 1, bisa pakai warna, hex, rgba, dll
+
+*/
+
+.kotak1{
+    background: linear-gradient(to right, blue 0%, purple 100%);
+}
+
+.kotak2{
+    background: linear-gradient(to bottom, blue 0%, purple 100%);
+}
+
+.kotak3{
+    background: linear-gradient(to left, blue 0%, purple 100%);
+}
+
+.kotak4{
+    background: linear-gradient(to top, blue 0%, purple 100%);
+}
+
+.kotak5{
+    background: linear-gradient(to top right, #0000ff 0%, #800080 100%);
+}
+
+.kotak6{
+    background: linear-gradient(to bottom right, rgba(0, 0, 255, .5) 0%, rgba(128, 0, 128, .7) 100%);
+}
+
+.kotak7{
+    background: linear-gradient(to bottom left, blue 0%, purple 100%);
+}
+
+.kotak8{
+    background: linear-gradient(to top left, blue 0%, purple 100%);
+}
+
+.kotak9{
+    background: linear-gradient(60deg, blue 0%, purple 100%);
+}
+
+
+/* 
+    ada 2 bentuk ellipse(default) dan circle
+*/
+.kotak10{
+    background: radial-gradient(blue, red);
+}
+
+.kotak11{
+    background: radial-gradient(ellipse, blue, red);
+}
+
+.kotak12{
+    background: radial-gradient(circle, blue, red);
+}
+
+.kotak13{
+    background: radial-gradient(closest-side, blue, red);
+}
+
+.kotak14{
+    background: radial-gradient(farthest-side, blue, red);
+}
+
+.kotak15{
+    background: radial-gradient(closest-corner, blue, red);
+}
+
+.kotak16{
+    background: radial-gradient(farthest-corner, blue, red);
+}
+
+/* 
+    bisa bikin koordinat sama kaya si linear tapi kalo ini bukan pake to, tapi at
+*/
+
+.kotak17{
+    background: radial-gradient(farthest-corner at top right, blue, red);
+}
+
+
+/* 
+    bisa kasih koordinat pake px atau %
+*/
+
+.kotak18{
+    background: radial-gradient(circle at 20px 60px, blue, red);
+}
+
+.kotak19{
+    background: radial-gradient(at 30% 80%, blue, red);
+}

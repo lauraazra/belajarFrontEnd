@@ -1,0 +1,13 @@
+/* 
+    repeat(berapa kali, size) => bisa dibuat 2 kali kalo mau bikin beda size
+
+    min-content => kalimat dipecah jadi kata kata nanti kolomnya ikutin lebar kata paling panjang
+    max-content => kalimatnya dibiarkan dan kolomnya ngikutin selebar kalimannya
+
+    auto-fill => ngecek kosong engga
+    auto-fit => ngepasin sama isi item
+    ditulis didalam repeat(auto-fill|auto-fit, size)
+
+    min-max => min(nilai minimal, nilai maksimal)
+    jadi ga bisa lebih kecil dari dan ga bisa lebih besar dari
+*/

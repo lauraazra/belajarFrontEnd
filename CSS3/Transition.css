@@ -1,0 +1,70 @@
+/* 
+    Transition => 
+    property => property apa aja yang mau dipake 
+    <durasi> => lama transisi (wajib)
+    fungsi => linear(konstan) ease(default), ease-in(telat dulu baru kenceng), ease-out(kenceng dulu baru telat), ease-in-out(gabungan), cubic-bezier(isi 0,0,0,0 pakai curve gitu) 
+    delay => buat jeda
+*/
+
+.container{
+    width: 80%;
+    border: 2px solid black;
+    margin: auto;
+}
+
+.kotak{
+    background-color: blue;
+    width: 100px;
+    height: 100px;
+    margin: 5px 0;
+}
+
+.container:hover .kotak{
+    margin-left: calc(100% - 100px);
+    transform: rotate(180deg);
+    background-color: red;
+}
+
+.trans{
+    transition: 3s;
+}
+
+.trans1{
+    transition: margin-left 3s;
+}
+
+.trans2{
+    transition: 3s linear;
+}
+
+.trans3{
+    transition: 3s ease;
+}
+
+.trans4{
+    transition: 3s ease-in;
+}
+
+.trans5{
+    transition: 3s ease-out;
+}
+
+.trans6{
+    transition: 3s ease-in-out;
+}
+
+.trans7{
+    transition: 3s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+}
+
+.trans8{
+    transition: 3s 3s;
+}
+
+.trans9{
+    transition: transform 2s ease-in-out 1s;
+}
+
+.trans10{
+    transition: background-color 3s ease-out 2s;
+}

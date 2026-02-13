@@ -1,0 +1,91 @@
+/* 
+    transform => buat gusar geser, hardware acceseleration
+    scale(angka), scaleX(angka), scaleY(angka) => besar kecil
+    rotate(deg), rotateX(deg), rotateY(deg) => muter muter
+    skew(deg), skewX(deg), skewY(deg) => miring miring
+    translate(px), translateX(px), translateY(px) => geser geser
+*/
+h2{
+    text-align: center;
+}
+
+.container{
+    display: flex;
+    flex-wrap: wrap;
+    perspective: 500px;
+}
+
+.kotak{ 
+    background-color: lightblue;
+    width: 100px;
+    height: 100px;
+    margin: 50px auto 0;
+    transition: 0.5s ease;
+    text-align: center;
+    line-height: 100px;
+}
+
+.transform:hover{
+    transform: scale(2);
+}
+
+.transform1:hover{
+    transform: scaleX(2);
+}
+
+.transform2:hover{
+    transform: scaleY(2);
+}
+
+.transform3:hover{
+    transform: rotate(30deg);
+}
+
+.transform4:hover{
+    transform: rotateX(180deg);
+}
+
+.transform5:hover{
+    transform: rotateY(180deg);
+}
+
+.transform6:hover{
+    transform: skew(30deg);
+}
+
+.transform7:hover{
+    transform: skewX(30deg);
+}
+
+.transform8:hover{
+    transform: skewY(30deg);
+}
+
+.transform9:hover{
+    transform: translate(20px);
+}
+
+.transform10:hover{
+    transform: translateX(20px);
+}
+
+.transform11:hover{
+    transform: translateY(20px);
+}
+
+.transform12:hover{
+    transform: translate(30px) scale(3) rotate(-45deg) skew(-45deg);
+}
+
+.transform13:hover{
+    transform: scale(2, 1.5);
+}
+
+.transform14:hover{
+    transform: skew(20deg, 10deg);
+}
+
+.transform15:hover{
+    transform: translate(20px, 50px);
+}
+

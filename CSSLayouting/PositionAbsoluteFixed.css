@@ -1,0 +1,137 @@
+.container{
+    display: flex;
+    width: 100%;
+}
+.absolute, .float, .fixed{
+    flex: 1;
+    margin-right: 5px;
+}
+
+/* 
+    Absolute
+*/
+
+/* ngebaca top 0 dari bungkusnya yang relative */
+
+.bungkus{
+    position: relative;
+}
+.satu{
+    width: 100px;
+    height: 100px;
+    background-color: lightblue;
+}
+
+.dua{
+    width: 100px;
+    height: 100px;
+    background-color: green;
+    position: absolute;
+    top: 0;
+    left: 30px;
+}
+
+.tiga{
+    width: 100px;
+    height: 100px;
+    background-color: lightpink;
+}
+
+/* karena ga punya bungkus yang relative kalo dikasih top 0 bakal ngebaca dari windows */
+
+.satu1{
+    width: 100px;
+    height: 100px;
+    background-color: lightblue;
+}
+
+.dua2{
+    width: 100px;
+    height: 100px;
+    background-color: green;
+    position: absolute;
+    left: 30px;
+}
+
+.tiga3{
+    width: 100px;
+    height: 100px;
+    background-color: lightpink;
+}
+
+/* 
+    Float 
+*/
+
+/* dengan clear fix */
+
+.cf:before,
+.cf:after {
+    content: " "; /* 1 */
+    display: table; /* 2 */
+}
+
+.cf:after {
+    clear: both;
+}
+
+.float{
+    border: 2px solid orange;
+}
+
+.bungkusfloat{
+    border: 3px solid gray;
+}
+
+.empat, .lima, .enam{
+    float: left;
+}
+
+.empat{
+    width: 100px;
+    height: 100px;
+    background-color: royalblue;
+}
+
+.lima{
+    width: 100px;
+    height: 100px;
+    background-color: limegreen;
+}
+
+.enam{
+    width: 100px;
+    height: 100px;
+    background-color: salmon;
+}
+
+.fixed{
+    border: 5px dashed burlywood;
+    height: 2000px;
+}
+
+.fix{
+    width: 100px;
+    height: 100px;
+    background-color: magenta;
+    position: fixed;
+    top: 0;
+    right: 0;
+}
+
+.fix2{
+    width: 100px;
+    height: 100px;
+    background-color: lightgoldenrodyellow;
+    position: fixed;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.fix3{
+    width: 100px;
+    height: 100px;
+    background-color: rosybrown;
+    position: fixed;
+    bottom: 0;
+}

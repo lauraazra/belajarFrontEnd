@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Form lanjutan</title>
+</head>
+
+<body>
+    <form action="">
+        <label>
+            Username :
+            <input type="text" name="Username">
+        </label>
+        <br>
+        <label>
+            Password
+            <input type="password" name="password">
+        </label>
+        <br>
+        <input type="radio" name="jeniskelamin" id="pria"><label for="pria">pria</label>
+        <input type="radio" name="jeniskelamin" id="wanita"><label for="wanita">wanita</label>
+        <br>
+        <input type="checkbox" name="menyanyi" id="menyanyi"><label for="menyanyi">menyanyi</label>
+        <input type="checkbox" name="olahraga" id="olahraga"><label for="olahraga">olahraga</label>
+        <input type="checkbox" name="ngoding" id="ngoding"><label for="ngoding">ngoding</label>
+        <br>
+        <textarea name="alamat" id="alamat">alamat</textarea>
+        <br>
+        <select name="" id="">
+            <option value="bandung">Bandung</option>
+            <option value="jogja">Jogja</option>
+            <option value="jakarta">Jakarta</option>
+        </select>
+        <br>
+        <input type="submit" value="kirim">
+        <br>
+        <button type="submit">Kirim</button>
+    </form>
+
+    <br><br><br>
+    <h2>LATIHAN</h2>
+    <form action="">
+        <table border="1" cellspacing="0" cellpadding="5">
+            <tr>
+                <td><label for="username">Username:</label></td>
+                <td><input type="text"></td>
+            </tr>
+            <tr>
+                <td><label for="password">Password:</label></td>
+                <td><input type="password"></td>
+            </tr>
+            <tr>
+                <td colspan="2"><input type="radio" name="jeniskelamin" id="pria"><label for="pria">Pria</label><input
+                        type="radio" name="jeniskelamin" id="wanita"><label for="wanita">Wanita</label></td>
+            </tr>
+        </table>
+    </form>
+</body>
+
+</html>

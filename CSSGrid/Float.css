@@ -1,0 +1,48 @@
+body{
+    margin: 0;
+    padding: 0;
+}
+
+.header{
+    height: 250px;
+    background-color: violet;
+}
+
+.content{
+    height: 700px;
+    overflow: hidden;
+}
+
+.content::after {
+    content: '';
+    display: block;
+    clear: both;
+}
+
+.navigasi {
+    float: left;
+    width: 40%;
+    height: 100%;
+}
+
+.aside{
+    background-color: blue;
+    height: 40%;
+}
+
+.nav{
+    background-color: red;
+    height: 60%;
+}
+
+.main{
+    float: right;
+    background-color: brown;
+    height: 100%;
+    width: 60%;
+}
+
+.footer{
+    height: 150px;
+    background-color: black;
+}

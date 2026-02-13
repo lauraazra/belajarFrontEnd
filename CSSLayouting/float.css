@@ -1,0 +1,26 @@
+/* 
+    Float => none (default), right, left
+    box model => normal flow
+    float => out of flow
+*/
+
+div{
+    width: 100px;
+    height: 100px;
+}
+
+.satu{
+    background-color: salmon;
+}
+
+.dua{
+    background-color: limegreen;
+}
+
+.tiga{
+    background-color: skyblue;
+}
+
+/* 
+    clear => left, right, both
+*/
