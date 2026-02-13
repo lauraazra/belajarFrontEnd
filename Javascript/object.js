@@ -1,4 +1,4 @@
-/* 
+/*
 Object = kumpulan nilai yang memiliki nama
 object = array yang lebih sakti
 object rajanya
@@ -6,7 +6,7 @@ object rajanya
 var dalam object disebut => property
 function disebut method
 */
-/* 
+/*
 var mhs = {
     nama: 'Alvar Azra',
     umur: 23,
@@ -25,7 +25,7 @@ console.log(mhs.alamat);
 console.log(mhs.alamat.provinsi);
  */
 
-/* 
+/*
 // Membuat Object
 // Object Literal
 var mhs = {
@@ -60,3 +60,30 @@ function Mahasiswa(nama, npm, email, jurusan) {
 // harus ada new nya
 var mhs4 = new Mahasiswa('Sindi', '1502633364', 'sindiresti@gmail.com', 'Kimia Tabur')
  */
+
+
+// this
+// function declaration
+function halo() {
+    console.log(this);
+    console.log('halo');
+}
+halo();
+// this mengembalikan object global
+
+// object literal
+var obj = { a: 10, nama: 'azra' }
+obj.halo = function () {
+    console.log(this);
+    console.log('halo');
+}
+obj.halo()
+// this mengembalikan object yang bersangkutan
+
+// contructor
+function Halo() {
+    console.log(this);
+    console.log('halo');
+}
+new Halo()
+// this mengembalikan object yang baru dibuat
