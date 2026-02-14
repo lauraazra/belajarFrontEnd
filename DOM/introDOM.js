@@ -24,7 +24,7 @@ Model = struktur hirarkinya
 
 DOM Tree = representasi elemen elemen di html
 NodeList = kumpulan node apapun tipenya
-HTMLCollection = kumpulan node khusus element saja
+HTMLCollection = kumpulan node khusus element saja, mirip array
 HTMLCollection bersifat live, nodeList tidak
 Root Node = akar = document
 Parent Node = node yang ada 1 tingkkat di atas node lain
