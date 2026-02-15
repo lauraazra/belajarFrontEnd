@@ -17,3 +17,31 @@
     - mouseOver / mouseOut: Efek pas kursor lewat di atas elemen.
 */
 
+/* 
+Inner, Style, setAtribut, classList
+*/
+
+const judul = document.getElementById('judul');
+judul.innerHTML = 'Azra'
+judul.style.color = 'lightblue'
+judul.style.backgroundColor = 'orange'
+judul.setAttribute('name', 'azra') //untuk set atribut
+// judul.getAttribute('name')
+// judul.removeAttribute('name')
+
+const sectionA = document.querySelector('section#a');
+sectionA.innerHTML = '<ul><li>item 1</li><li>item 2</li><li>item 3</li></ul>' //biasa isi apa aja tapi ga bisa di baris baru
+
+const p4 = document.querySelector('section#b p');
+// p4.classList.add('label')
+// p4.classList.add('satu')
+// p4.classList.add('dua')
+// p4.classList.add('tiga')
+// p4.classList()
+// p4.classList.remove('label')
+// p4.classList.toggle('biru-muda')
+// p4.classList.item(2)
+// p4.classList.item(4)
+// p4.classList.contains('tiga')
+// p4.classList.contains('empat')
+// p4.classList.replace('tiga', 'empat')
