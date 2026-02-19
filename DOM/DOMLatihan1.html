@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Latihan 1 Bermain Warna</title>
+    <style>
+        html,
+        body {
+            height: 100%;
+        }
+
+        body {
+            text-align: center;
+        }
+
+        .biru-muda {
+            background-color: lightblue;
+        }
+
+        .rangeWarna {
+            width: 300px;
+            margin: 20px auto;
+        }
+
+        .range {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            margin-top: 10px;
+        }
+
+        .kotak {
+            width: 25px;
+            height: 25px;
+        }
+
+        .merah {
+            background-color: red;
+        }
+
+        .hijau {
+            background-color: green;
+        }
+
+        .biru {
+            background-color: blue;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Bermain dengan warna</h1>
+    <button id="ubahWarna">Ubah Warna!</button>
+
+    <div class="rangeWarna">
+        <div class="range">
+            <div class="kotak merah"></div>
+            <input type="range" name="merah" min="0" max="255">
+        </div>
+        <div class="range">
+            <div class="kotak hijau"></div>
+            <input type="range" name="hijau" min="0" max="255">
+        </div>
+        <div class="range">
+            <div class="kotak biru"></div>
+            <input type="range" name="biru" min="0" max="255">
+        </div>
+
+    </div>
+
+
+    <script src="DOMLatihan1.js"></script>
+</body>
+
+</html>
