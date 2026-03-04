@@ -1,95 +1,84 @@
-// Destructuring Variable / Assignment
+// Destructuring pada function
+// function dengan array
+function kalkulasiArray(a, b) {
+    return [a + b, a - b, a * b, a / b,]
+}
 
-// Destructuring Array
-const perkenalan = ['Halo', 'nama', 'eug', 'azra']
-// biasanya harus begini
-console.log(perkenalan[0] + '\n');
+// biasanya begini
+// console.log('Cara Biasa');
+// const tambah = kalkulasiArray(2, 4)[0]
+// const kurang = kalkulasiArray(2, 4)[1]
+// const kali = kalkulasiArray(2, 4)[2]
+// const bagi = kalkulasiArray(2, 4)[3]
+// console.log(tambah);
+// console.log(kurang);
+// console.log(kali);
+// console.log(bagi);
+
 // sekarang bisa gini
-const [salam, satu, dua, nama] = perkenalan
-console.log(nama);
-console.log(satu);
-console.log(dua);
-console.log(nama + '\n');
-//Skip, jadi cuma salam sama nama
-const [ape, , , apa] = perkenalan
-console.log(ape);
-console.log(apa + '\n');
-// Rest Parameter
-const [halo, ...values] = perkenalan
-console.log(halo);
-console.log(values + '\n');
+// console.log('Cara Destructuring');
+// const [tambah, kurang, kali, bagi] = kalkulasiArray(2, 5)
+// console.log(`tambah = ${tambah}`);
+// console.log(`kurang = ${kurang}`);
+// console.log(`kali = ${kali}`);
+// console.log(`bagi = ${bagi}`);
+
+// Masalah kalo pakai array => lau harus bikin sesuai urutannya kalo engga bisa berantakan
+// console.log('Cara Destructuring');
+// const [tambah, kali, kurang, bagi] = kalkulasiArray(2, 5)
+// console.log(`tambah = ${tambah}`);
+// console.log(`kurang = ${kurang}`);
+// console.log(`kali = ${kali}`);
+// console.log(`bagi = ${bagi}`);
+// nah hasilnya jadi ga sesuai kan, makannya bisa pakai function object
 
 
 
-// Swap Items
-let a = 2
-let b = 3
-console.log(a);
-console.log(b);
-[a, b] = [b, a]
-console.log(a);
-console.log(b + '\n');
+// function dengan object
+// function kalkulasiObject(a, b) {
+//     return {
+//         tambah: a + b,
+//         kurang: a - b,
+//         kali: a * b,
+//         bagi: a / b
+//     }
+// }
+// const { tambah, kali, kurang, bagi } = kalkulasiObject(2, 5)
+// console.log(`tambah = ${tambah}`);
+// console.log(`kurang = ${kurang}`);
+// console.log(`kali = ${kali}`);
+// console.log(`bagi = ${bagi}`);
+// nah walau ga urut tetap aman
 
 
 
-
-// Return Value pada Function
-function coba() {
-    return [9, 2]
+// Destruturing function arguments
+const mhs1 = {
+    nama: 'Alvar',
+    umur: 33,
+    nilai: {
+        uts: 80,
+        uas: 90,
+        tugas: 100
+    }
 }
-const [c, d] = coba()
-console.log(c);
-console.log(d + '\n');
 
-// Destructuring Object
-// biasanya kan begini
-const mhs = {
-    namaPanggilan: 'Alvar',
-    umur: 23,
-    // email: 'azra@gmail.com'
+// biasa begini
+function cetakMHS1(nama, umur, nilai) {
+    // return `halo nama saya ${nama}, umur saya ${umur} tahun, ${Object.entries(nilai).map(([jenis, skor]) => `${jenis} : ${skor}`).join(', ')}`;
+    return `halo nama saya ${nama}, umur saya ${umur} tahun, uts: ${nilai.uts}, uas: ${nilai.uas}, tugas: ${nilai.tugas}`;
 }
-console.log(mhs.namaPanggilan);
-console.log(mhs.umur + '\n');
-// sekarang bisa gini, tapi namanya harus sama
-// const { namaPanggilan, umur } = mhs
-// console.log(namaPanggilan);
-// console.log(umur + '\n');
-// Assign ke Variable baru
-// const { namaPanggilan: name, umur: u } = mhs
-// console.log(name);
-// console.log(u + '\n');
-// Memberikan Default Value
-// const { namaPanggilan, umur, email = 'default@gmail.com' } = mhs
-// console.log(namaPanggilan);
-// console.log(umur);
-// console.log(email + '\n');
-// Memberikan nilai default + assign ke variable baru
-const { namaPanggilan: name, umur: u, email: e = 'default@gmail.com' } = mhs
-console.log(name);
-console.log(u);
-console.log(e + '\n');
+console.log(cetakMHS1(mhs1.nama, mhs1.umur, mhs1.nilai));
 
-// Assingment tanpa Deklarasi Object
-const { guru, murid } = {
-    guru: 'Pak Asep',
-    murid: 'Udin'
+// bisa juga begini
+function cetakMHS2(mhs) {
+    // return `halo nama saya ${mhs.nama}, umur saya ${mhs.umur} tahun, uts: ${mhs.nilai.uts}, uas: ${mhs.nilai.uas}, tugas: ${mhs.nilai.tugas}`
+    return `halo nama saya ${mhs.nama}, umur saya ${mhs.umur} tahun, ${Object.entries(mhs.nilai).map(([jenis, skor]) => `${jenis}: ${skor}`).join(', ')}`
 }
-console.log(guru);
-console.log(murid + '\n');
+console.log(cetakMHS2(mhs1));
 
-// Mengambil field pada object, setelah dikirim sebagai parameter untuk function
-const karyawan = {
-    id: 123,
-    jabatan: 'manager',
-    gaji: 90000
+// tapi bisa juga begini
+function cetakMHS3({ nama, umur, nilai: { uas, uts, tugas } }) {
+    return `halo nama saya ${nama}, umur saya ${umur} tahun, uts: ${uts}, uas: ${uas}, tugas: ${tugas}`
 }
-// biasanya
-function employe(object) {
-    return object.id
-}
-console.log(employe(karyawan) + '\n');
-// sekarang panggil aja langsung pakai destruturing
-function employe2({ id }) {
-    return id
-}
-console.log(employe2(karyawan) + '\n');
+console.log(cetakMHS3(mhs1));
