@@ -1,0 +1,37 @@
+[
+    {
+        "nama": "Andi Wijaya",
+        "NPM": "2026001",
+        "email": "andi.w@example.com",
+        "jurusan": "Teknik Informatika",
+        "idDosenWali": 101
+    },
+    {
+        "nama": "Budi Santoso",
+        "NPM": "2026002",
+        "email": "budi.s@example.com",
+        "jurusan": "Sistem Informasi",
+        "idDosenWali": 102
+    },
+    {
+        "nama": "Citra Lestari",
+        "NPM": "2026003",
+        "email": "citra.l@example.com",
+        "jurusan": "Teknik Informatika",
+        "idDosenWali": 101
+    },
+    {
+        "nama": "Dewi Sartika",
+        "NPM": "2026004",
+        "email": "dewi.s@example.com",
+        "jurusan": "Ilmu Komputer",
+        "idDosenWali": 103
+    },
+    {
+        "nama": "Eko Prasetyo",
+        "NPM": "2026005",
+        "email": "eko.p@example.com",
+        "jurusan": "Teknik Informatika",
+        "idDosenWali": 102
+    }
+]
