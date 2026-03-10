@@ -1,32 +1,77 @@
-$('.search-button').on('click', function () {
-    $.ajax({
-        url: 'http://www.omdbapi.com/?apikey=31f3a60e&s=' + $('.input-keyword').val() + '&y=' + $('.input-year').val(),
-        success: results => {
-            const movies = results.Search
-            let cards = ''
-            movies.forEach(m => {
-                cards += showMovie(m)
-            })
-            $('.movie-container').html(cards)
+// $('.search-button').on('click', function () {
+//     $.ajax({
+//         url: 'http://www.omdbapi.com/?apikey=31f3a60e&s=' + $('.input-keyword').val() + '&y=' + $('.input-year').val(),
+//         success: results => {
+//             const movies = results.Search
+//             let cards = ''
+//             movies.forEach(m => {
+//                 cards += showMovie(m)
+//             })
+//             $('.movie-container').html(cards)
 
-            // ketika tombol diclik
-            $('.modal-detail-button').on('click', function () {
-                $.ajax({
-                    url: 'http://www.omdbapi.com/?apikey=31f3a60e&i=' + $(this).data('imdbid'),
-                    success: m => {
-                        const headerDetail = showHeaderDetail(m)
-                        const detailMovie = showDetail(m)
-                        $('.modal-header').html(headerDetail)
-                        $('.modal-body').html(detailMovie)
-                    }
-                })
+//             // ketika tombol diclik
+//             $('.modal-detail-button').on('click', function () {
+//                 $.ajax({
+//                     url: 'http://www.omdbapi.com/?apikey=31f3a60e&i=' + $(this).data('imdbid'),
+//                     success: m => {
+//                         const headerDetail = showHeaderDetail(m)
+//                         const detailMovie = showDetail(m)
+//                         $('.modal-header').html(headerDetail)
+//                         $('.modal-body').html(detailMovie)
+//                     }
+//                 })
 
-            })
-        },
-        error: (e) => console.log(e.responseText)
+//             })
+//         },
+//         error: (e) => console.log(e.responseText)
+//     })
+
+// })
+
+
+// Pakai Fetch
+const searchButton = document.querySelectorAll('.search-button');
+searchButton.forEach(btn => {
+    btn.addEventListener('click', function () {
+        const inputKey = document.querySelector('.input-keyword');
+        const inputYear = document.querySelector('.input-year');
+        if (inputKey.value.trim() === "") {
+            alert("Waduh, tolong isi judul filmnya dulu ya!");
+            return;
+        }
+        fetch('http://www.omdbapi.com/?apikey=31f3a60e&s=' + inputKey.value + '&y=' + inputYear.value)
+            .then(response => response.json())
+            .then(response => {
+                if (response.Search) {
+                    const movies = response.Search;
+                    let cards = '';
+                    movies.forEach(m => cards += showMovie(m));
+                    document.querySelector('.movie-container').innerHTML = cards;
+
+                    // ketika button Show Detai di click
+                    const detailButton = document.querySelectorAll('.modal-detail-button');
+                    detailButton.forEach(btn => {
+                        btn.addEventListener('click', function () {
+                            const imdbid = this.dataset.imdbid;
+                            fetch('http://www.omdbapi.com/?apikey=31f3a60e&i=' + imdbid)
+                                .then(response => response.json())
+                                .then(m => {
+                                    const headerDetail = showHeaderDetail(m);
+                                    const movieDetail = showDetail(m);
+                                    const modalHeader = document.querySelector('.modal-header');
+                                    const modalBody = document.querySelector('.modal-body');
+                                    modalHeader.innerHTML = headerDetail;
+                                    modalBody.innerHTML = movieDetail;
+                                })
+                        })
+                    })
+                } else {
+                    document.querySelector('.movie-container').innerHTML = `<p class="text-center">Film tidak ditemukan!</p>`;
+                }
+            });
     })
-
 })
+
 
 
 function showMovie(m) {
