@@ -30,47 +30,116 @@
 
 
 // Pakai Fetch
+// const searchButton = document.querySelectorAll('.search-button');
+// searchButton.forEach(btn => {
+//     btn.addEventListener('click', function () {
+//         const inputKey = document.querySelector('.input-keyword');
+//         const inputYear = document.querySelector('.input-year');
+//         if (inputKey.value.trim() === "") {
+//             alert("Waduh, tolong isi judul filmnya dulu ya!");
+//             return;
+//         }
+//         fetch('http://www.omdbapi.com/?apikey=31f3a60e&s=' + inputKey.value + '&y=' + inputYear.value)
+//             .then(response => response.json())
+//             .then(response => {
+//                 if (response.Search) {
+//                     const movies = response.Search;
+//                     let cards = '';
+//                     movies.forEach(m => cards += showMovie(m));
+//                     document.querySelector('.movie-container').innerHTML = cards;
+
+//                     // ketika button Show Detai di click
+//                     const detailButton = document.querySelectorAll('.modal-detail-button');
+//                     detailButton.forEach(btn => {
+//                         btn.addEventListener('click', function () {
+//                             const imdbid = this.dataset.imdbid;
+//                             fetch('http://www.omdbapi.com/?apikey=31f3a60e&i=' + imdbid)
+//                                 .then(response => response.json())
+//                                 .then(m => {
+//                                     const headerDetail = showHeaderDetail(m);
+//                                     const movieDetail = showDetail(m);
+//                                     const modalHeader = document.querySelector('.modal-header');
+//                                     const modalBody = document.querySelector('.modal-body');
+//                                     modalHeader.innerHTML = headerDetail;
+//                                     modalBody.innerHTML = movieDetail;
+//                                 })
+//                         })
+//                     })
+//                 } else {
+//                     document.querySelector('.movie-container').innerHTML = `<p class="text-center">Film tidak ditemukan!</p>`;
+//                 }
+//             });
+//     })
+// })
+
+
+// Refactor Fetch
 const searchButton = document.querySelectorAll('.search-button');
 searchButton.forEach(btn => {
-    btn.addEventListener('click', function () {
-        const inputKey = document.querySelector('.input-keyword');
-        const inputYear = document.querySelector('.input-year');
-        if (inputKey.value.trim() === "") {
-            alert("Waduh, tolong isi judul filmnya dulu ya!");
-            return;
-        }
-        fetch('http://www.omdbapi.com/?apikey=31f3a60e&s=' + inputKey.value + '&y=' + inputYear.value)
-            .then(response => response.json())
-            .then(response => {
-                if (response.Search) {
-                    const movies = response.Search;
-                    let cards = '';
-                    movies.forEach(m => cards += showMovie(m));
-                    document.querySelector('.movie-container').innerHTML = cards;
-
-                    // ketika button Show Detai di click
-                    const detailButton = document.querySelectorAll('.modal-detail-button');
-                    detailButton.forEach(btn => {
-                        btn.addEventListener('click', function () {
-                            const imdbid = this.dataset.imdbid;
-                            fetch('http://www.omdbapi.com/?apikey=31f3a60e&i=' + imdbid)
-                                .then(response => response.json())
-                                .then(m => {
-                                    const headerDetail = showHeaderDetail(m);
-                                    const movieDetail = showDetail(m);
-                                    const modalHeader = document.querySelector('.modal-header');
-                                    const modalBody = document.querySelector('.modal-body');
-                                    modalHeader.innerHTML = headerDetail;
-                                    modalBody.innerHTML = movieDetail;
-                                })
-                        })
-                    })
-                } else {
-                    document.querySelector('.movie-container').innerHTML = `<p class="text-center">Film tidak ditemukan!</p>`;
-                }
-            });
+    btn.addEventListener('click', async function () {
+        const data = getInputSearh()
+        if (!data) return
+        const movies = await getMovies(data.key, data.year)
+        updateUI(movies)
     })
 })
+
+function getInputSearh() {
+    const inputKey = document.querySelector('.input-keyword');
+    const inputYear = document.querySelector('.input-year');
+    if (inputKey.value.trim() === "") {
+        alert("Waduh, tolong isi judul filmnya dulu ya!");
+        return;
+    }
+    return {
+        key: inputKey.value,
+        year: inputYear.value
+    };
+}
+
+function getMovies(inputKey, inputYear) {
+    return fetch('http://www.omdbapi.com/?apikey=31f3a60e&s=' + inputKey + '&y=' + inputYear)
+        .then(response => response.json())
+        .then(response => response.Search)
+}
+
+function updateUI(movies) {
+    const container = document.querySelector('.movie-container');
+    if (movies) {
+        let cards = '';
+        movies.forEach(m => cards += showMovie(m));
+        container.innerHTML = cards;
+    } else {
+        container.innerHTML = `<p class="text-center text-danger">Film tidak ditemukan!</p>`;
+    }
+}
+
+// Event binding
+document.addEventListener('click', async function (e) {
+    if (e.target.classList.contains('modal-detail-button')) {
+        const imdbid = e.target.dataset.imdbid
+        const movieDetail = await getMovieDetail(imdbid)
+        updateUIDetail(movieDetail)
+    }
+})
+
+function getMovieDetail(imdbid) {
+    return fetch('http://www.omdbapi.com/?apikey=31f3a60e&i=' + imdbid)
+        .then(response => response.json())
+        .catch(err => {
+            console.error(err);
+            alert("Gagal ambil detail film. Coba cek koneksi lu!");
+        });
+}
+
+function updateUIDetail(m) {
+    const headerDetail = showHeaderDetail(m);
+    const movieDetail = showDetail(m);
+    const modalHeader = document.querySelector('.modal-header');
+    const modalBody = document.querySelector('.modal-body');
+    modalHeader.innerHTML = headerDetail;
+    modalBody.innerHTML = movieDetail;
+}
 
 
 
