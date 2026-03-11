@@ -79,8 +79,12 @@ searchButton.forEach(btn => {
     btn.addEventListener('click', async function () {
         const data = getInputSearh()
         if (!data) return
-        const movies = await getMovies(data.key, data.year)
-        updateUI(movies)
+        try {
+            const movies = await getMovies(data.key, data.year)
+            updateUI(movies)
+        } catch (error) {
+            document.querySelector('.movie-container').innerHTML = `<p class="text-center text-danger">${error}</p>`
+        }
     })
 })
 
@@ -99,19 +103,33 @@ function getInputSearh() {
 
 function getMovies(inputKey, inputYear) {
     return fetch('http://www.omdbapi.com/?apikey=31f3a60e&s=' + inputKey + '&y=' + inputYear)
-        .then(response => response.json())
-        .then(response => response.Search)
+        .then(response => {
+            if (!response.ok) {
+                throw new Error(response.statusText)
+            }
+            return response.json()
+        })
+        .then(response => {
+            console.log("Isi response dari API:", response);
+            if (response.Response === "False") {
+                throw new Error(response.Error)
+            }
+            return response.Search
+        })
 }
 
 function updateUI(movies) {
     const container = document.querySelector('.movie-container');
-    if (movies) {
-        let cards = '';
-        movies.forEach(m => cards += showMovie(m));
-        container.innerHTML = cards;
-    } else {
-        container.innerHTML = `<p class="text-center text-danger">Film tidak ditemukan!</p>`;
-    }
+    // if (movies) {
+    //     let cards = '';
+    //     movies.forEach(m => cards += showMovie(m));
+    //     container.innerHTML = cards;
+    // } else {
+    //     container.innerHTML = `<p class="text-center text-danger">Film tidak ditemukan!</p>`;
+    // }
+    let cards = '';
+    movies.forEach(m => cards += showMovie(m));
+    container.innerHTML = cards;
 }
 
 // Event binding
