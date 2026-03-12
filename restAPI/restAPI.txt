@@ -1,0 +1,85 @@
+Episode #1 
+API membuat kita terkoneksi satu sama lain
+
+APA itu API = Application Programming Interface
+- antarmuka yang berupa kumpulan fungsi yang dijalankan program lain
+
+web service = sistem yang mendukung interaksi 2 aplikasi berbeda melalui jaringan
+
+
+
+Episode #2
+Rest = aturan aturan untuk membuat web service
+Representational State Transfer
+memungkinkaan interaksi mesin dengan mesin
+
+Ilustrasinya seperti di restoran
+- API = penghubung
+- Rest API = aturan / mendukung
+- ada request dan response
+- data yang diterima berupa json
+
+Rest API
+- Representasional State Transfer
+- Gaya Perancangan
+- Stateless
+- Roy Fielding
+- Hampir selalu menggunakan HTTP
+- memungkinkan interaksi antar mesin
+
+Bagaimana WEB bekerja 
+HTTP => Hypertext Transfer Protocol
+kita akses URL = Uniform Resource Locator
+- Alamat dari sebuah Resource
+
+kita mengetikan google.com dikirim ke server dan dikembalikan dalam bentuk HTML (karena interaksi manusia dan mesin) ==> disebut get
+Kita mengirim request beserta data di dalam form ke sever, dikembalikan dalam bentuk HTML Respon. ==> disebut post
+
+user request data ke server, server request ke rest server, rest sever ngerespon dengan json dan kode status, server ngerespon ke user berupa HTML.
+user dan server disebut rest client
+
+Restful
+HTTP Method / verbs
+- Get => Mengambil data
+- Post => Menambah data
+- Put => Mengubah Data
+- Delete => Menghapus Data
+(Put dan delete tidak bisa digunakan browser)
+
+Stateless
+- setiap request dilakukan secara terisolaso
+- server tidak menyimpan state apapun 
+- setiap request harus berisi semua informasi yang dibutuhkan server
+
+resful API
+- Menggunakan HTTP Method yang benar
+- Endpointnya cukup sampai nama File
+- Stateless
+
+JSON => Javascript Object Notation
+- bisa dibaca manusia dan mesin
+- berisi key dan value
+- lebih sederhana dan jelas dibanding XML
+- dapat digunakan beragam bahasa dengan cara tersendiri
+- menggnakan format object Javascript
+- bisa digunakan untuk konfigurasi
+- .json
+- Douglas Crockford
+
+JSON vs XML
+- JSON format Object, XML Format HTML
+
+Object  => property dengan pasangan key dan value
+        => di JS bisa bikin fuction atau method, tapi di json ga ada jadi ga boleh
+
+Tipe data dari Value json (BASONN)
+- boolean
+- array
+- string
+- object
+- number
+- null
+
+PHP
+- json_encode() => mengubah array menjadi json
+- json_decose => mengubah json menjadi array associative
