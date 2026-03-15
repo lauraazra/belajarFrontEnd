@@ -1,0 +1,64 @@
+<?php
+$data = file_get_contents('pizza.json');
+$menu = json_decode($data, true);
+
+// var_dump($menu["menu"][0]["nama"]);
+$menu = $menu["menu"];
+// echo $menu[0]["nama"];
+?>
+
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Pizza Hub</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand" href="#"><img src="img/logo.png" alt="" width="120"></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                <div class="navbar-nav">
+                    <a class="nav-link active" aria-current="page" href="#">All Menu</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container">
+        <div class="row mt-4">
+            <div class="col">
+                <h1>All Menu</h1>
+            </div>
+        </div>
+        <div class="row mt-2">
+            <?php foreach ($menu as $row) : ?>
+                <div class="col-md-3 mt-2">
+                    <div class="card" style="width: 18rem;">
+                        <img src="img/pizza/<?= $row["gambar"]; ?>" class="card-img-top">
+                        <div class="card-body">
+                            <h5 class="card-title"><?= $row["nama"]; ?></h5>
+                            <p class="card-text"><?= $row["deskripsi"]; ?></p>
+                            <h5>Rp <?= number_format($row["harga"], 0, ',', '.'); ?></h5>
+                            <a href="#" class="btn btn-primary">Pesan Sekarang</a>
+                        </div>
+                    </div>
+                </div>
+            <?php endforeach ?>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-4.0.0.js" integrity="sha256-9fsHeVnKBvqh3FB2HYu7g2xseAZ5MlN6Kz/qnkASV8U=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.min.js" integrity="sha384-G/EV+4j2dNv+tEPo3++6LCgdCROaejBqfUeNjuKAiuXbjrxilcCdDz6ZAVfHWe1Y" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+</body>
+
+</html>
