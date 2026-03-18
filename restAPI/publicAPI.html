@@ -1,0 +1,131 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap demo</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand" href="#">Navbar</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
+                aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                <div class="navbar-nav">
+                    <a class="nav-link active" aria-current="page" href="#">Home</a>
+                    <a class="nav-link" href="#">Features</a>
+                    <a class="nav-link" href="#">Pricing</a>
+                    <a class="nav-link disabled" aria-disabled="true">Disabled</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <div class="container">
+        <div class="row mt-4">
+            <div class="col">
+                <h1 class="titlePage">Rick and Morty</h1>
+            </div>
+        </div>
+        <div class="row mt-1">
+            <!-- Name -->
+            <div class="col-md-5">
+                <div class="input-group mb-3">
+                    <input type="text" class="form-control search-name" placeholder="Search Name...">
+                </div>
+            </div>
+            <!-- Gender -->
+            <div class="col">
+                <div class="dropdown">
+                    <button id="genderBtn" class="btn btn-outline-dark dropdown-toggle w-100" type="button"
+                        data-bs-toggle="dropdown" aria-expanded="false">
+                        <i class="fa-solid fa-mars-and-venus"></i> All Genders
+                    </button>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="#" onclick="updateFilter('gender', '', '#genderBtn')"><i
+                                    class="fa-solid fa-mars-and-venus"></i> All Genders</a></li>
+                        <li><a class="dropdown-item" href="#"
+                                onclick="updateFilter('gender', 'Female', '#genderBtn')"><i
+                                    class="fa-solid fa-venus"></i> Female</a></li>
+                        <li><a class="dropdown-item" href="#" onclick="updateFilter('gender', 'Male', '#genderBtn')"><i
+                                    class="fa-solid fa-mars"></i> Male</a></li>
+                        <li><a class="dropdown-item" href="#"
+                                onclick="updateFilter('gender', 'Genderless', '#genderBtn')"><i
+                                    class="fa-solid fa-genderless"></i> Genderless</a></li>
+                        <li><a class="dropdown-item" href="#"
+                                onclick="updateFilter('gender', 'Unknown', '#genderBtn')"><i
+                                    class="fa-regular fa-circle-question"></i> Unknown</a></li>
+                    </ul>
+                </div>
+            </div>
+            <!-- Status -->
+            <div class="col">
+                <div class="dropdown">
+                    <button id="statusBtn" class="btn btn-outline-dark dropdown-toggle w-100" type="button"
+                        data-bs-toggle="dropdown" aria-expanded="false">
+                        All Status
+                    </button>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="#" onclick="updateFilter('status', '', '#statusBtn')">All
+                                Status</a></li>
+                        <li><a class="dropdown-item" href="#" onclick="updateFilter('status', 'Alive', '#statusBtn')"><i
+                                    class="fa-solid fa-heart"></i> Alive</a></li>
+                        <li><a class="dropdown-item" href="#" onclick="updateFilter('status', 'Dead', '#statusBtn')"><i
+                                    class="fa-solid fa-skull"></i> Dead</a></li>
+                        <li><a class="dropdown-item" href="#"
+                                onclick="updateFilter('status', 'Unknown', '#statusBtn')"><i
+                                    class="fa-regular fa-circle-question"> </i> Unknown</a></li>
+                    </ul>
+                </div>
+            </div>
+            <!-- Species -->
+            <div class="col">
+                <div class="dropdown">
+                    <button id="speciesBtn" class="btn btn-outline-dark dropdown-toggle w-100" type="button"
+                        data-bs-toggle="dropdown" aria-expanded="false">
+                        All Species
+                    </button>
+                    <ul class="dropdown-menu" id="dropdownSpecies"></ul>
+                </div>
+            </div>
+            <!-- Type -->
+            <div class="col">
+                <div class="form-check form-switch">
+                    <input class="form-check-input" type="checkbox" role="switch" id="switchCheckDefault">
+                    <label class="form-check-label text-body-secondary" for="switchCheckDefault">Have a type?</label>
+                </div>
+            </div>
+        </div>
+        <hr>
+        <div class="row mt-3" id="listCharacter">
+
+        </div>
+        <div class="row mt-3 mb-5">
+            <nav aria-label="...">
+                <ul class="pagination justify-content-center" id="pagination-list">
+                    <!-- <li class="page-item"><a href="#" class="page-link" id="prevPage">Previous</a></li>
+                    <li class="page-item">
+                        <a class="page-link" href="#" id="page-number">1</a>
+                    </li>
+                    <li class="page-item"><a class="page-link" href="#" id="nextPage">Next</a></li> -->
+                </ul>
+            </nav>
+        </div>
+
+
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous"></script>
+    <script src="publicAPI.js"></script>
+</body>
+
+</html>
