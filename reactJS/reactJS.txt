@@ -1,0 +1,30 @@
+dibuat 2013 oleh jordan walke
+versi yang dipelajari saat ini => 18.2.0
+dibuat karena fb berkembang
+
+Manipulasi DOM
+- HTML = konten awal halaman
+- DOM = konten yang telah diperbarui
+- DOM terlihat sakti naun nulisnya ribet, segitu banyak buat nambahin 1 buah h1
+
+Menyiapkan aplikasi react
+- menyiapkan aplikasi react dengan ReactDOM.createRoot() dari package reat-dom
+- method digunakan sebagai wadah
+- butuh method render untuk nampilin h1
+
+
+JSX
+- ekstensi sintaks js yang dapat mendeskripsikan ui seperti html
+- meski ada cara lain bikin komponen kebanyakan tetap pakai JSX
+- JSX mirip html tapi strict dan bisa nampilin info dinamis
+
+3 aturan JSX
+- selalu mengembalikan 1 elemen, makannya harus dibungkus 1 elemen aja
+- harus selalu tutup tag, bahkan kalo ga ada penutupnya harus ditutup pakai "/>"
+- gunakan camelCase untuk atribut, class berubah jadi className
+
+
+Materi yang harus dikuasai sebelum react
+- html, css, javascriptFundamental, DOM, Modern JS(es6), Git & CLI (Command Line Interface), package manager (NodeJS+NPM)
+
+jadi eug belum belajar node, nah eug bingung tamatin node dulu atau langsung ke react
