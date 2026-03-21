@@ -1,0 +1,25 @@
+{
+  "name": "8npm",
+  "version": "1.0.0",
+  "description": "Belajar Node JS",
+  "homepage": "https://github.com/lauraazra/belajarFrontEnd#readme",
+  "bugs": {
+    "url": "https://github.com/lauraazra/belajarFrontEnd/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lauraazra/belajarFrontEnd.git"
+  },
+  "license": "ISC",
+  "author": "Azra",
+  "type": "commonjs",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app",
+    "dev": "ls",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "validator": "^13.5.2"
+  }
+}

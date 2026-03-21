@@ -1,0 +1,4 @@
+apa itu npm?
+- bukan hanya node package manager
+- buat nyimpen project yang open source
+- command line client
