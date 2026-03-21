@@ -1,0 +1,66 @@
+Apa itu NodeJS =
+- NodeJS buakn bahasa pemrograman tapi runtime yang mengeksekusi javascript. 
+
+js jalan di browser karena browser punya v8 engine, tapi terbatas hanya di browser.
+
+ryan dahl bikin nodejs tahun 2009, dia bikin web server menggunakan event loop bukan thread. nah nyoba pakai bahasa selain js dia ga bisa, akhirnya bikin v8 engine diluar browser dan itulah nodejs. jadi bisa baca memory, i/o, file system, network, dll. 
+
+karakteristik nodejs
+- asyncronous & event driven
+- non blocking
+- single threaded but highly scalable
+- cross platform
+- mit license
+- npm
+
+fitur utama node js
+- file system
+- buffer
+- Http & Https
+- REPL
+- Console
+- Crypto
+- Zlib
+- dll
+
+
+
+Arsitektur NodeJS
+asyncronous, non-blocking, single thread
+
+dulu kita pakai DOM untuk ambil element html,
+namun karena di node v8 nya ada di luar browser jadi kita ga bisa pakai DOM lagi
+
+Synchronous harus selesai dulu tugasnya sebelum pindah ke tugas lainya, jadinya blocking nunggu
+Asynchronous misal tugas 1 belum selesai sudah bisa mengerjakan tuga 2, jadinya non blocking ga salah nunggu
+
+
+
+
+REPL (Read-Eval-Print-Loop)
+touch (nama file) = buat file
+vi (nama file) = buka editor file di git bash. + i untuk memasukan kodingan
+esc : wq => untuk exit editor
+cat (nama file) = liat isi file
+.load (nama file) = buat menggunakan file
+rm (nama file) = ngapus file
+.break = kalo ga jadi dan pengen keluar
+.editor = mode mirip vi tapi di node
+.save (nama file) = untuk menyimpan ke file
+
+node . = cari root (index)
+
+
+
+
+Node Modules
+- fungsionalitas di file js yang bisa digunakan pada aplikasi node.js
+- setiap module punya konteks masing masing
+- core modules = module dalam node js
+- local modules = dibikin kita sendiri
+- third party modules = dari pihak ketiga
+
+require()
+1. core modules
+2. file atau directory
+3. filer 'node_modules'
