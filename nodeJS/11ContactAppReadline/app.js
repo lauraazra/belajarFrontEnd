@@ -6,7 +6,7 @@ bisa pakai object destructuring jadi
 
 // fungsi utama readline
 const main = async () => {
-    const command = await contacts.writeQuestion('Masukan Perintah Anda: \n (add|update|list|detail|remove|removeall)')
+    const command = await contacts.writeQuestion('Masukan Perintah Anda: \n (add|update|list|detail|remove|removeall): ')
     switch (command.toLowerCase()) {
         case 'add': {
             const nama = await contacts.writeQuestion('Masukan nama Anda: ');
