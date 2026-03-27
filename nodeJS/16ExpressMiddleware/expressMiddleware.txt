@@ -1,0 +1,13 @@
+apa itu middleware
+ => software yang menghubungkan 1 software dengan software lain
+ => database, web server, game engine, web aplication
+
+web aplication
+ => req => app => response
+ bisa gini => req => middleware => app => response
+ middleware bisa lebih dari 1
+
+Express middleware => serangkaian pemanggilan fungsi middleware
+    => user defined middleware => aplication, router, error
+    => built in
+    => third party
