@@ -1,0 +1,33 @@
+<div className="container">
+    <div className="row">
+        <div class="col mt-5">
+            <h1>Tambah Data Contact</h1>
+            <% if (typeof errors !='undefined' ) { %>
+                <div class="alert alert-danger" role="alert">
+                    <ul>
+                        <% errors.forEach(e=> { %>
+                            <li>
+                                <%= e.msg %>
+                            </li>
+                            <% }) %>
+                    </ul>
+                </div>
+                <% } %>
+                    <form method="post" action="/contact/update">
+                        <div class="mb-3">
+                            <input type="hidden" name="oldNama" value="<%= contact.oldNama || contact.nama %>" />
+                            <label for="nama" class="form-label">Nama</label>
+                            <input type="text" class="form-control" id="nama" name="nama" required
+                                value="<%= contact.nama %>">
+                            <label for="nohp" class="form-label">No HP</label>
+                            <input type="text" class="form-control" id="nohp" name="nohp" required
+                                value="<%= contact.nohp %>">
+                            <label for="email" class="form-label">Email</label>
+                            <input type="email" class="form-control" id="email" name="email" required
+                                value="<%= contact.email %>">
+                        </div>
+                        <button type="submit" class="btn btn-primary">Submit</button>
+                    </form>
+        </div>
+    </div>
+</div>
