@@ -1,0 +1,32 @@
+[
+    {
+        "nama": "Laura Azra",
+        "nohp": "082121555554",
+        "email": "lazraaprilyanti@gmail.com"
+    },
+    {
+        "nama": "Alvar Putra",
+        "nohp": "081234567890",
+        "email": "alvar.putra@example.com"
+    },
+    {
+        "nama": "Budi Santoso",
+        "nohp": "085711223344",
+        "email": "budi.santoso@pmail.com"
+    },
+    {
+        "nama": "Siti Aminah",
+        "nohp": "089988776655",
+        "email": "siti.aminah@resto.id"
+    },
+    {
+        "nama": "Deni Setiawan",
+        "nohp": "082211445566",
+        "email": "deni.dev@code.com"
+    },
+    {
+        "nama": "Alvar Samudra",
+        "nohp": "082121555886",
+        "email": "aprilsamudra@gmail.com"
+    }
+]
