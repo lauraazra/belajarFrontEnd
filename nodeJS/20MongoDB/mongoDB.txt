@@ -1,0 +1,29 @@
+apa itu mongodb?
+Humongous Database
+Database berbasis dokumen yang memiliki, fitur query, indexing, skalabilitas, dan fleksibilitas yang kita inginkan dan butuhkan.
+
+apa itu database berbasis dokumen?
+NoSQL Database
+- Not Only NoSQL
+- Schemaless / Flexible Schema
+- Denormalization
+- Non-relational Database
+- Unstructured, semi-structured, structured
+
+Terminolog SQL VS NoSQL
+SQL
+- Format table
+- record disebut row
+- column
+NoSQL
+- Formatnya Json(collection)
+- record disebut document
+- field
+
+Embeded Document (Denormalization)
+- data 1 dengan data 2 fieldnya bisa berbeda, kalo di sql harus bikin table baru
+
+Kenapa MongoDB?
+- JSON(BSON)
+- Javascript
+- MERN, MEVN, MEAN
