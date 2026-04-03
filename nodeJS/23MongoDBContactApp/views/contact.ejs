@@ -1,0 +1,57 @@
+<div class="container">
+    <div class="row">
+        <div class="col mt-5">
+            <h1>List Contact</h1>
+            <a type="button" class="btn btn-primary mb-3 mt-2" href="/contact/add"><i
+                    class="bi bi-file-earmark-plus"></i> Tambah Data Contact</a>
+            <form action="/contact/deleteAll/?_method=DELETE" method="post" class="d-inline">
+                <button type="submit" class="btn btn-danger mb-3 mt-2"
+                    onclick="return confirm('Apa kamu yakin akan menghapus semua contacts?')"><i
+                        class="bi bi-folder-x"></i> Hapus Semua Data Contact</button>
+            </form>
+
+            <% if (msg.length !==0) { %>
+                <div class="alert alert-success alert-dismissible my-alert" role="alert">
+                    <%= msg %>
+                        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                </div>
+                <% } %>
+                    <table class="table table-striped">
+                        <thead>
+                            <tr>
+                                <th scope="col">#</th>
+                                <th scope="col">Nama</th>
+                                <th scope="col">No HP</th>
+                                <th scope="col">Aksi</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <% if (contacts.length==0) { %>
+                                <tr>
+                                    <td colspan="4" class="text-center">
+                                        Data Tidak Ada!
+                                    </td>
+                                </tr>
+                                <% } %>
+                                    <% contacts.forEach((contact, i)=> { %>
+                                        <tr>
+                                            <th scope="row">
+                                                <%= i+1 %>
+                                            </th>
+                                            <td>
+                                                <%= contact.nama %>
+                                            </td>
+                                            <td>
+                                                <%= contact.nohp %>
+                                            </td>
+                                            <td><a href="/contact/<%= contact._id %>"
+                                                    class="badge text-bg-success text-decoration-none"><i
+                                                        class="bi bi-info-circle"></i>
+                                                    Detail</a></td>
+                                        </tr>
+                                        <% }) %>
+                        </tbody>
+                    </table>
+        </div>
+    </div>
+</div>
