@@ -4,6 +4,8 @@ const app = express()
 const port = 3000
 const { readContact, detailContact, addContact, findContact, deleteContact, updateContact, deleteAllContacts } = require('./utils/contacts.js')
 const { body, validationResult } = require('express-validator')
+
+// Flah Setting
 const session = require('express-session')
 const cookieParser = require('cookie-parser')
 const flash = require('connect-flash')
@@ -24,7 +26,7 @@ app.use(flash())
 
 // built in middleware
 app.use(express.static('public'))
-app.use(express.urlencoded({ extended: true }));
+app.use(express.urlencoded({ extended: true })); // penerjemah url encoded pas ngirim data (post)
 
 // Index atau Home
 app.get('/', (req, res) => {
