@@ -1,11 +1,11 @@
-dibuat 2013 oleh jordan walke
+dibuat 2013 oleh jordan walke(engineer facebook)
 versi yang dipelajari saat ini => 18.2.0
 dibuat karena fb berkembang
 
 Manipulasi DOM
 - HTML = konten awal halaman
 - DOM = konten yang telah diperbarui
-- DOM terlihat sakti naun nulisnya ribet, segitu banyak buat nambahin 1 buah h1
+- DOM terlihat sakti namun nulisnya ribet, segitu banyak buat nambahin 1 buah h1
 
 Menyiapkan aplikasi react
 - menyiapkan aplikasi react dengan ReactDOM.createRoot() dari package reat-dom
@@ -28,3 +28,48 @@ Materi yang harus dikuasai sebelum react
 - html, css, javascriptFundamental, DOM, Modern JS(es6), Git & CLI (Command Line Interface), package manager (NodeJS+NPM)
 
 jadi eug belum belajar node, nah eug bingung tamatin node dulu atau langsung ke react
+
+Sekarang sudah belajar node
+
+React
+- Library untuk UI
+- Menyediakan fungsi2 untuk membuat UI, terserah developer
+- Un-opinionated(cara gunainnya ga terlalu diatur)
+- jadi ekosistemnya berkembang
+- tools pihak ketiganya banyak banget
+
+Core Concepts
+- Component => 
+    - pecahan ui, 
+    - bisa jadi potongan kode mandiri yang bisa digunakan kembali seperti lego, 
+    - jadi untuk ngubah element ui tinggal ubah komponen saja
+
+    Cara buat Component
+        - pakai function pada JS
+        - diawali huru besar
+        - function ngembaliin elemen ui jadi komponen dan ditulis dengan JSX
+        - di call sebagai tag html saat dirender
+
+    Komponen Bersarang
+        - Aplikasi dengan banyak komponen
+        - dalam komponen bisa ada komponen lainnya
+        - misal masukin komponen header ke komponen homepage
+        - buat function untuk setiap komponen yang dibuat
+    
+    Menggunakan kembali Komponen
+        - componen bisa digunakan berkali kembali
+        - gimana biar pakai komponen sama tapi infonya beda
+    
+    nampilin data pakai props
+        - atribut bisa digunakan untuk mengubah elemen
+        - contoh src, img, dll
+        - kita bisa kirim properti untuk ngubah informasi pakai props
+
+    props refactor pakai destructuring, ternary operator
+
+    Menambah interaksi dengan state
+        - halaman bisa berubah karena ada interaksi oleh user
+        - di react, data berubah seiring waktu disebut state
+        - state bisa ditambah atau dibah ke komponen manapun
+        - react pakai state dan event handler untuk interakktivitas
+

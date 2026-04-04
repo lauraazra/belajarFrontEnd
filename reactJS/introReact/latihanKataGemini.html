@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Latihan React Pro</title>
+    <script src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    
+    <style>
+        h2 { display: inline; margin: 20px; }
+        .reset { display: block; margin-top: 10px; margin-left: 22.5px; }
+    </style>
+</head>
+<body>
+    <div id="root"></div>
+
+    <script type="text/babel">
+        // Komponen Tombol: Pakai onClick dan className
+        function Tombol({ name, onClick, customClass }) {
+            return (
+                <button onClick={onClick} className={customClass || ""}>
+                    {name}
+                </button>
+            );
+        }
+
+        function HomePage() { 
+            // State untuk jumlah angka
+            const [count, setCount] = React.useState(0);
+
+            // Handler: Fungsi untuk merubah state
+            const handleMinus = () => setCount((prev) => prev - 1);
+            const handlePlus = () => setCount((prev) => prev + 1);
+            const handleReset = () => setCount(0);
+
+            return (
+                <div>
+                    <Tombol name="-" onClick={handleMinus} />
+                    
+                    {/* Tampilan Angka */}
+                    <h2>{count}</h2>
+                    
+                    <Tombol name="+" onClick={handlePlus} />
+                    
+                    {/* Tombol Reset dengan class khusus */}
+                    <Tombol name="Reset" onClick={handleReset} customClass="reset" />
+                </div>
+            );
+        }
+
+        // Render ke root
+        const container = document.getElementById('root');
+        const root = ReactDOM.createRoot(container);
+        root.render(<HomePage />);
+    </script>
+</body>
+</html>
+
+<!-- 
+    memang ada beberapa 
+-->

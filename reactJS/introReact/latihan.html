@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Latihan React Intro</title>
+    <script src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <style>
+        h2{
+            display: inline;
+            margin: 20px;
+        }
+        .reset{
+            display: block;
+            margin-left: 22.5px;
+        }
+    </style>
+</head>
+<body>
+    <div id="root"></div>
+    <script type="text/babel">
+        const container = document.getElementById('root')
+        const root = ReactDOM.createRoot(container)
+
+        function Tombol({name, fungsi, kelas}){
+            return <button onClick={fungsi} class={kelas? kelas : ""}>{name}</button>
+        }
+
+        function HomePage() { 
+            const [numbers, setNumbers] = React.useState(0)
+            function minus(){
+                setNumbers(numbers-1)
+            }
+            function plus() {  
+                setNumbers(numbers+1)
+            }
+            function reset() {  
+                setNumbers(0)
+            }
+            return(
+                <div>
+                    <Tombol name="-" fungsi={minus} />
+                    <h2 key={numbers}>{numbers}</h2>
+                    <Tombol name="+" fungsi={plus} />
+                    <Tombol name="Reset" fungsi={reset} kelas="reset"/>
+                </div>)
+        }
+
+        root.render(<HomePage />)
+    </script>
+</body>
+</html>
