@@ -1,0 +1,9 @@
+Sebuah utility-first yang didalamnya terdapat banyak kelas kelas yang dapat kita gunakan
+
+utility-first?
+CSS biasa itu component-first
+utility-first => 1 kelas mengerjakan 1 hal saja
+
+kok jadi kaya inline css? apa bedanya ama bootstrap? kok jadi kurang semantik ya?
+tailwind memungkinkan kita untuk tidak membuka file css lagi, jadi fokus ke html saja
+
