@@ -1,0 +1,80 @@
+Spacing
+    - Margin = m, my, mx, mr, ml, mt, mb
+                Bisa dikasih  minus
+    - Padding = sama kaya margin tapi diawali dengan 'p'
+                ga punya auto dan ga bisa minus
+
+
+Sizing
+    - Width = bisa 1,2,dll... atau pecahan 1/2,1/4,dll..
+
+
+Typography
+    - Font Family, bisa custom
+    - Font Size
+
+Color, bisa custom, bisa gradient, bisa 3 warna pakai via-
+    - Background Color
+    - Text Color, bisa gradient pakai bg-clip-text
+
+Background
+    - background attachment : bg-scroll, bg-fixed, bg-local
+    - background size : bg-auto, bg-contain, bg-cover
+    - background repeat : bg-no-repeat, bg-repeat-y,dll
+    - background position : bg-center, bg-bottom, dll
+    - rounded : rounded, rounded-arahmana/ukuran/atau keduanya.
+    - border
+
+Pseudo
+    - group hover, kalo mau child ikut parent
+    - psudo-selection
+    - first-line, first-letter
+    - after:content-['*']
+    - invalid, invalid:focus
+    - peer-invalid
+
+Dark Mode
+    - dark:
+    - bikin toggle pakai label, checkbox, css, dan javascript
+
+Transition, Transform
+    - origin - : untuk ganti sumbu putar
+    - transition kasih efect animasi
+    - rotate, scale, Transform
+    - duration, delay
+
+Animation
+    - spin, ping,bounce,
+    - bisa bikin sendiri di config
+
+Layouting
+    - Container = bikin lebar fix,  
+    - float = wraping paragraf
+    - Position = static, fixed, absolute, sticky, relative
+    - column-2/3/4/dll
+    
+Interactive
+    - scroll-smooth
+
+Responsive design
+    - sm, md, lg, xl, 2xl
+
+Display Flex
+    - flex wrap, flex gap, flex-grow, flex-shrink, self-center/end/start/dll, 
+
+Grid
+    - grid, grid-cols-2, gap-2, col/row-start-1/2/3/dll, col-span-2
+
+directives
+    - keyword yang punya @ rules
+    - @layer base (untuk global), component (tengah-tengah), utilities (paling bawah), variants (kondisi, bagus buat hover)
+    - @apply buat custom kelas utility tailwind
+
+function
+    - fungsi custom untuk akses nilai khusus di theme, theme(colors.wpu)
+
+untuk function & directives versi 3 & 4 ada perbedaam
+
+Dulu di v3, kita ribet karena harus bolak-balik antara file CSS buat gaya dan file JavaScript buat konfigurasi warna atau font. Kita perlu panggil tiga perintah @tailwind yang berbeda biar kodingannya jalan.
+
+Nah, di v4, semuanya jadi jauh lebih ringkas. Lu nggak perlu lagi file JavaScript tambahan karena Tailwind sekarang sudah satu jiwa sama CSS. Cukup satu baris @import, dan lu bisa bikin warna custom kayak text-wpu langsung pake variabel CSS biasa. Intinya, v4 bikin lu lebih fokus koding di satu tempat tanpa banyak perintilan file yang bikin pusing.
